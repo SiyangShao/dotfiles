@@ -1,0 +1,31 @@
+Host NTUGPU_USER
+	Hostname 10.96.190.253
+	User shaosy
+Host NTUGPU_Public
+	Hostname 10.96.190.88
+	User shaosy 
+	ForwardAgent yes
+Host NTUGPU_Public_Root
+	Hostname 10.96.190.88
+	User root
+	ForwardAgent yes
+Host NTUGPU_Ruiqi
+	Hostname 10.96.190.188
+	User siyang
+	ForwardAgent yes
+Host HACC
+	Hostname xacchead.d2.comp.nus.edu.sg
+	User shaosy
+	ForwardAgent yes
+Host azure-jump
+	HostName 172.167.229.23
+	User aisys
+	Port 5567
+Host fuji2
+	HostName 192.168.168.7
+	User lrq
+	ProxyJump azure-jump
+Host cloudlab
+	HostName d8545-10s10505.wisc.cloudlab.us
+	User shaosy
+	ForwardAgent yes

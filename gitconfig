@@ -1,0 +1,11 @@
+[user]
+        name = Siyang Shao
+        email = siyang.shao@outlook.com
+        signingkey = 3EF20E063BC61DA235DBE87CA4B7B7E7E2A1EAA8
+[core]
+        editor = vim
+[commit]
+        gpgsign = true
+[gpg]
+        program = gpg
+

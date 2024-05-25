@@ -6,7 +6,6 @@ live_config_reload = true
 
 [shell]
 # args = ["-l", "-c", "-zellij attach --index 0 --create"]
-args = [ "-l", "-c", "zellij attach --index 0 --create" ]
+args = [ "-l", "-c", "zellij" ]
 
 program = "/bin/zsh"
-
