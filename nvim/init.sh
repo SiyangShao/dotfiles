@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+set -e
+
+REPO="SiyangShao/dotfiles"
+BRANCH="main"
+NVIM_CONFIG_DIR="$HOME/.config/nvim"
+
+# Install neovim if not already installed
+if command -v nvim &>/dev/null; then
+    echo "neovim already installed: $(nvim --version | head -1)"
+else
+    if command -v brew &>/dev/null; then
+        brew install neovim
+    elif command -v apt-get &>/dev/null; then
+        sudo apt-get update && sudo apt-get install -y neovim
+    elif command -v dnf &>/dev/null; then
+        sudo dnf install -y neovim
+    elif command -v pacman &>/dev/null; then
+        sudo pacman -S --noconfirm neovim
+    else
+        echo "No supported package manager found. Please install neovim manually."
+        exit 1
+    fi
+fi
+
+# Set neovim as default editor
+SHELL_RC=""
+if [[ "$SHELL" == */zsh ]]; then
+    SHELL_RC="$HOME/.zshrc"
+elif [[ "$SHELL" == */bash ]]; then
+    SHELL_RC="$HOME/.bashrc"
+fi
+
+if [[ -n "$SHELL_RC" ]]; then
+    if ! grep -q 'EDITOR=nvim' "$SHELL_RC" 2>/dev/null; then
+        printf '\nexport EDITOR=nvim\nexport VISUAL=nvim\n' >> "$SHELL_RC"
+        echo "Set nvim as default editor in $SHELL_RC"
+    else
+        echo "nvim already set as default editor in $SHELL_RC"
+    fi
+fi
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+# Copy config only if ~/.config/nvim does not already exist
+if [[ -d "$NVIM_CONFIG_DIR" ]]; then
+    echo "$HOME/.config/nvim already exists, skipping config copy."
+else
+    mkdir -p "$NVIM_CONFIG_DIR"
+
+    # If running from a local clone, copy directly
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd || echo "")"
+    if [[ -f "$SCRIPT_DIR/init.lua" ]]; then
+        cp -r "$SCRIPT_DIR"/. "$NVIM_CONFIG_DIR/"
+    else
+        # Download config from GitHub without cloning the full repo
+        TMP_DIR="$(mktemp -d)"
+        trap 'rm -rf "$TMP_DIR"' EXIT
+        curl -fsSL "https://github.com/$REPO/archive/refs/heads/$BRANCH.tar.gz" \
+            | tar -xz -C "$TMP_DIR" --strip-components=2 "dotfiles-$BRANCH/nvim"
+        cp -r "$TMP_DIR"/. "$NVIM_CONFIG_DIR/"
+    fi
+
+    echo "Copied nvim config to $NVIM_CONFIG_DIR"
+fi
+
+echo "Done. Restart your shell or run: source $SHELL_RC"
