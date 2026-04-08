@@ -2,10 +2,12 @@
 
 ## Quick Start
 
-No need to clone the repo. Run this one-liner:
-
 ```sh
-curl -fsSL https://raw.githubusercontent.com/SiyangShao/dotfiles/main/nvim/init.sh | bash
+# via unified installer
+curl -fsSL https://raw.githubusercontent.com/SiyangShao/dotfiles/main/install.sh | bash -s -- nvim
+
+# or from a local clone
+bash install.sh nvim
 ```
 
 This will:
