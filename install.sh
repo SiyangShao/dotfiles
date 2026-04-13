@@ -4,7 +4,7 @@ set -e
 REPO="SiyangShao/dotfiles"
 BRANCH="main"
 DOTFILES_DIR="$HOME/.dotfiles"
-ALL_COMPONENTS=(claude nvim aerospace alacritty karabiner zellij)
+ALL_COMPONENTS=(claude nvim aerospace alacritty ghostty karabiner zellij)
 
 # Ensure we are inside the dotfiles repo
 ensure_repo() {
