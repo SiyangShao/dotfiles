@@ -1,0 +1,255 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && clang++ $fileName -Wshadow -Wall -Wextra -Wfatal-errors -Wformat=2 -Wfloat-equal -Wuninitialized -fsanitize=address -fsanitize=undefined -std=c++20 -o $fileNameWithoutExt && time $dir$fileNameWithoutExt "
+  },
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "C_Cpp.default.cppStandard": "c++23",
+  "C_Cpp.default.cStandard": "c17",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "jupyter.askForKernelRestart": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "liveshare.anonymousGuestApproval": "accept",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "gopls": {
+    "ui.semanticTokens": true,
+  },
+  "cmake.configureOnOpen": true,
+  "git.enableSmartCommit": true,
+  "workbench.startupEditor": "none",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "window.restoreWindows": "none",
+  "vim.useSystemClipboard": true,
+  "editor.tabSize": 2,
+  "editor.mouseWheelZoom": true,
+  "vim.easymotion": true,
+  "vim.leader": "<ctrl>",
+  "vim.ignorecase": false,
+  "vim.hlsearch": true,
+  "vim.useCtrlKeys": true,
+  // "vim.handleKeys": {
+  //   "<C-a>": false,
+  //   "<C-f>": false
+  // },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // {
+    //   "before": [
+    //     "z",
+    //     "z"
+    //   ],
+    //   "commands": [
+    //     "editor.toggleFold"
+    //   ]
+    // },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "=",
+        "="
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "/"
+      ],
+      "commands": [
+        "actions.find"
+      ]
+    }
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "clangd.onConfigChanged": "restart",
+  "C_Cpp.experimentalFeatures": "enabled",
+  "editor.largeFileOptimizations": false,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "go.formatTool": "gofmt",
+  "vim.neovimPath": "/usr/bin/nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "cpp": false,
+    "rust": false
+  },
+  "editor.copyWithSyntaxHighlighting": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "window.menuBarVisibility": "toggle",
+  "errorLens.delay": 1000,
+  "workbench.editor.empty.hint": "hidden",
+  "explorer.confirmDelete": false,
+  "clangd.arguments": [
+    "--completion-style=detailed",
+    "--header-insertion=never"
+  ],
+  "clangd.checkUpdates": true,
+  "terminal.external.linuxExec": "",
+  "editor.fontFamily": "JetbrainsMono NF",
+  "terminal.integrated.fontFamily": "JetbrainsMono NF",
+  "editor.wordWrap": "on",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportGeneralTypeIssues": "none",
+    "reportArgumentType": "none"
+  },
+  "cmake.options.statusBarVisibility": "visible",
+  "redhat.telemetry.enabled": false,
+  "cmake.showOptionsMovedNotification": false,
+  "terminal.integrated.scrollback": 100000,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "githubPullRequests.pullBranch": "never",
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "window.titleBarStyle": "custom",
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.pdf": "pdf.preview",
+    "git-rebase-todo": "default"
+  },
+  "notebook.editorOptionsCustomizations": {
+    "editor.tabSize": 4,
+    "editor.indentSize": 4,
+    "editor.insertSpaces": true
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[typst]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "[typst-code]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "files.autoSave": "afterDelay",
+  "workbench.preferredDarkColorTheme": "Tokyo Storm AltSynt",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "python.analysis.typeCheckingMode": "basic",
+  "docker.extension.enableComposeLanguageServer": false,
+  "workbench.preferredLightColorTheme": "IntelliJ IDEA New UI Light with Light Header",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "http.systemCertificatesNode": true,
+  "geminicodeassist.project": "generated-vine-clt45",
+  "claudeCode.preferredLocation": "sidebar",
+  "geminicodeassist.displayInlineContextHint": false,
+  "claudeCode.selectedModel": "default",
+  "claudeCode.useTerminal": true,
+  "protobuf.protoc.path": "/opt/homebrew/bin/protoc",
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true
+  },
+  "markdown-preview-enhanced.enablePreviewZenMode": false,
+  "chat.viewSessions.orientation": "stacked",
+  "chat.viewSessions.enabled": false,
+  "workbench.colorTheme": "Tokyo Storm AltSynt",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "workbench.colorCustomizations": {
+    "[IntelliJ IDEA New UI Light with Light Header]": {
+      "terminal.background": "#eff1f5",
+      "terminal.foreground": "#4c4f69",
+      "terminalCursor.foreground": "#dc8a78",
+      // 修正 ANSI 颜色：将深色模式的荧光色替换为 Latte 专用的柔和色
+      "terminal.ansiBlack": "#5c5f77",
+      "terminal.ansiRed": "#d20f39",
+      "terminal.ansiGreen": "#40a02b",
+      "terminal.ansiYellow": "#df8e1d",
+      "terminal.ansiBlue": "#1e66f5",
+      "terminal.ansiMagenta": "#ea76cb",
+      "terminal.ansiCyan": "#179299",
+      "terminal.ansiWhite": "#acb0be",
+      // 亮色系列（用于加粗或高亮）
+      "terminal.ansiBrightBlack": "#6c6f85",
+      "terminal.ansiBrightRed": "#d20f39",
+      "terminal.ansiBrightGreen": "#40a02b",
+      "terminal.ansiBrightYellow": "#df8e1d",
+      "terminal.ansiBrightBlue": "#1e66f5",
+      "terminal.ansiBrightMagenta": "#ea76cb",
+      "terminal.ansiBrightCyan": "#179299",
+      "terminal.ansiBrightWhite": "#bcc0cc",
+      // 解决“看不清”的终极手段
+      // "terminal.integrated.minimumContrastRatio": 4.5
+    }
+  },
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": false,
+    "repositories": true,
+    "searchAndCompare": true,
+    "launchpad": false
+  },
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "HACK",
+    "CR",
+    "XCR"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "CR": {
+      "icon": "comment",
+      "foreground": "#f97316",
+      "iconColour": "#f97316",
+      "type": "tag"
+    },
+    "XCR": {
+      "icon": "check",
+      "foreground": "#22c55e",
+      "iconColour": "#22c55e",
+      "type": "tag"
+    }
+  },
+  "gitTreeCompare.resetCheckboxOnFileChange": true,
+  "gitTreeCompare.showCheckboxes": true,
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "editor.fontSize": 14,
+  "window.autoDetectColorScheme": true,
+}
